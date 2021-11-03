@@ -46,6 +46,15 @@ const HomeScreen = ({ navigation }) => {
       >
         <Text style={styles.btnText}>Go to Color Page</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate("ColorFluctuateScreen");
+        }}
+      >
+        <Text style={styles.btnText}>Go to Color Fluctuate Page</Text>
+      </TouchableOpacity>
     </View>
   );
 };

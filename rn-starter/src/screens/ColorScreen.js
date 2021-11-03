@@ -15,6 +15,12 @@ const ColorScreen = () => {
         }}
       />
 
+      <Button
+        title="Reset Colors"
+        onPress={() => {
+          setColorArray([]);
+        }}
+      />
       <FlatList
         data={colorArray}
         keyExtractor={(color) => {
@@ -27,7 +33,7 @@ const ColorScreen = () => {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                justifyContent: "space-evenly",
+                justifyContent: "space-between",
               }}
             >
               <View
