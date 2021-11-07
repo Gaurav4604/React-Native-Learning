@@ -50,10 +50,28 @@ const HomeScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          navigation.navigate("ColorFluctuateScreen");
+          navigation.navigate("SquareScreen");
         }}
       >
-        <Text style={styles.btnText}>Go to Color Fluctuate Page</Text>
+        <Text style={styles.btnText}>Go to Color Square Page</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate("TextScreen");
+        }}
+      >
+        <Text style={styles.btnText}>Go to Color Text Screen Page</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate("BoxScreen");
+        }}
+      >
+        <Text style={styles.btnText}>Go to Box Screen Page</Text>
       </TouchableOpacity>
     </View>
   );
