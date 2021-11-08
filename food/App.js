@@ -11,6 +11,7 @@ const navigator = createStackNavigator(
     defaultNavigationOptions: {
       title: 'Business Search',
     },
+    headerMode: 'none',
   },
 );
 

@@ -7,7 +7,7 @@ const inputReducer = (state = '', action) => {
   return state;
 };
 
-const termSubmitReducer = (state = '', action) => {
+const termSubmitReducer = (state = [], action) => {
   if (action.type === 'INPUT_SUBMIT') {
     return action.payload;
   }
@@ -16,5 +16,5 @@ const termSubmitReducer = (state = '', action) => {
 
 export default combineReducers({
   input: inputReducer,
-  term: termSubmitReducer,
+  result: termSubmitReducer,
 });
