@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import SearchBar from '../components/SearchBar';
 import ResultsList from '../components/ResultsList';
 import {submitText} from '../actions';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const filterByPrice = (price, results) => {
   return results.filter(result => {
@@ -17,23 +18,24 @@ const SearchScreen = props => {
     props.submitText('hello'); // for making the initial search
   }, []);
 
-  console.log(props.results ? props.results[0] : 'hello');
   return (
     <SafeAreaView>
-      <SearchBar />
-      <Text>{props.results.length}</Text>
-      <ResultsList
-        title="Cost Effective"
-        results={filterByPrice('$', props.results)}
-      />
-      <ResultsList
-        title="Pricier"
-        results={filterByPrice('$$', props.results)}
-      />
-      <ResultsList
-        title="Big Spender"
-        results={filterByPrice('$$$', props.results)}
-      />
+      <ScrollView>
+        <SearchBar />
+        <Text>{props.results.length}</Text>
+        <ResultsList
+          title="Cost Effective"
+          results={filterByPrice('$', props.results)}
+        />
+        <ResultsList
+          title="Pricier"
+          results={filterByPrice('$$', props.results)}
+        />
+        <ResultsList
+          title="Big Spender"
+          results={filterByPrice('$$$', props.results)}
+        />
+      </ScrollView>
     </SafeAreaView>
   );
 };
